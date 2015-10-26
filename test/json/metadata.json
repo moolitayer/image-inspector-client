@@ -1,0 +1,27 @@
+{
+  "Id": "85f4e2af80d39fccfa3abd218732bc4fc1711665527c5fdd556fb0ff9139c789",
+  "Parent": "48ecf305d2cf7046c1f5f8fcbcd4994403173441d4a7f125b1bb0ceead9de731",
+  "Created": "2015-10-13T23:39:52.388889568Z",
+  "Container": "6513026ba0de46b0ee484fa9e505bd8b6715df06bcc617fa70ac87defe0838b0",
+  "ContainerConfig": {
+    "Hostname": "6513026ba0de",
+    "Cmd": [
+      "/bin/sh",
+      "-c",
+      "#(nop) ADD file:3d655151e60ee9ae6490fe44ec7e42f0e0117f0cd6728fd5281299c01638a492 in /"
+    ],
+    "Image": "48ecf305d2cf7046c1f5f8fcbcd4994403173441d4a7f125b1bb0ceead9de731",
+    "Entrypoint": null
+  },
+  "DockerVersion": "1.8.2",
+  "Author": "Lokesh Mandvekar \u003clsm5@fedoraproject.org\u003e",
+  "Config": {
+    "Hostname": "6513026ba0de",
+    "Cmd": null,
+    "Image": "48ecf305d2cf7046c1f5f8fcbcd4994403173441d4a7f125b1bb0ceead9de731",
+    "Entrypoint": null
+  },
+  "Architecture": "amd64",
+  "Size": 186507296,
+  "VirtualSize": 186507296
+}
