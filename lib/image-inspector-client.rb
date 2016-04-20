@@ -28,6 +28,12 @@ module ImageInspectorClient
       @headers = {}
     end
 
+    def fetch_oscap_arf
+      exception_handler do
+        RestClient::Resource.new(@endpoint, http_options)['openscap'].get(http_headers).body
+      end
+    end
+
     def fetch_metadata
       exception_handler do
         RecursiveOpenStruct.new(
@@ -48,7 +54,7 @@ module ImageInspectorClient
       rescue JSON::ParserError
         json_error_msg = {}
       end
-      err_message = json_error_msg['message'] || e.message
+      err_message = json_error_msg['message'] || e.to_s
       raise InspectorClientException.new(e.http_code, err_message)
     end
 

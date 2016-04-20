@@ -11,6 +11,12 @@ ImageInspectorClient::Client.new('http://localhost:8080', 'v1')
   .fetch_metadata
   .ContainerConfig
   .Cmd
+
+
+Get OpenSCAP ARF as raw xml:
+ImageInspectorClient::Client.new('http://localhost:8080', 'v1')
+  .fetch_oscap_arf
+
 ```
 
 ## building from source

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arf:asset-report-collection xmlns:arf="http://scap.nist.gov/schema/asset-reporting-format/1.1" xmlns:core="http://scap.nist.gov/schema/reporting-core/1.1" xmlns:ai="http://scap.nist.gov/schema/asset-identification/1.1">
+  <core:relationships xmlns:arfvocab="http://scap.nist.gov/specifications/arf/vocabulary/relationships/1.0#" xmlns:arfrel="http://scap.nist.gov/vocabulary/arf/relationships/1.0#">
+    <core:relationship type="arfvocab:createdFor" subject="xccdf1">
+      <core:ref>collection1</core:ref>
+    </core:relationship>
+    <core:relationship type="arfrel:isAbout" subject="xccdf1">
+      <core:ref>asset0</core:ref>
+    </core:relationship>
+  </core:relationships>
+  <arf:report-requests>
+    <arf:report-request id="collection1">
+      <arf:content>
+      </arf:content>
+    </arf:report>
+  </arf:reports>
+</arf:asset-report-collection>
