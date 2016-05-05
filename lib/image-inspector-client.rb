@@ -20,11 +20,13 @@ module ImageInspectorClient
         username:          nil,
         password:          nil,
         bearer_token:      nil
-      }
+      },
+      http_proxy_uri:   nil
     )
       @endpoint = URI.parse("#{uri}/api/#{version}")
       @auth_options = auth_options
       @ssl_options = ssl_options
+      @http_proxy_uri = http_proxy_uri
       @headers = {}
     end
 
@@ -66,7 +68,8 @@ module ImageInspectorClient
         ssl_cert_store:  @ssl_options[:cert_store],
         verify_ssl:      @ssl_options[:verify_ssl],
         user:            @auth_options[:username],
-        password:        @auth_options[:password]
+        password:        @auth_options[:password],
+        proxy:           @http_proxy_uri
       }
     end
 
