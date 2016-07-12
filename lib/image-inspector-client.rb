@@ -56,7 +56,7 @@ module ImageInspectorClient
       rescue JSON::ParserError
         json_error_msg = {}
       end
-      err_message = json_error_msg['message'] || e.to_s
+      err_message = json_error_msg['message'] || e.response
       raise InspectorClientException.new(e.http_code, err_message)
     end
 
