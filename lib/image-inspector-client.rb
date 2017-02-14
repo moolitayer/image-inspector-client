@@ -94,7 +94,7 @@ module ImageInspectorClient
     end
 
     def to_s
-      'HTTP status code ' + @error_code.to_s + ', ' + @message
+      "HTTP status code #{@error_code}, #{@message}"
     end
   end
 end
