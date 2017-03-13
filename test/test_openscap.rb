@@ -40,7 +40,7 @@ class TestOpenscap < MiniTest::Test
 
   def test_openscap_404
     stub_request(:get, %r{/openscap}).to_return(
-      body: 'Openscap option was not chosen',
+      body: '{"message": "Openscap option was not chosen"}',
       status: 404
     )
 
