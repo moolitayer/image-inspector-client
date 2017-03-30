@@ -6,6 +6,7 @@ require 'recursive_open_struct'
 module ImageInspectorClient
   # module entry point
   class Client
+    AUTH_TOKEN_HEADER = "X-Auth-Token"
     def initialize(
       uri,
       version = 'v1',
@@ -21,10 +22,12 @@ module ImageInspectorClient
         password:          nil,
         bearer_token:      nil
       },
-      http_proxy_uri:   nil
+      http_proxy_uri:   nil,
+      auth_token: nil
     )
       @endpoint = URI.parse("#{uri}/api/#{version}")
       @auth_options = auth_options
+      @auth_token = auth_token
       @ssl_options = ssl_options
       @http_proxy_uri = http_proxy_uri
       @headers = {}
@@ -76,10 +79,13 @@ module ImageInspectorClient
     def http_headers
       if @auth_options[:bearer_token]
         {
-          Authorization: "Bearer #{@auth_options[:bearer_token]}"
+          Authorization: "Bearer #{@auth_options[:bearer_token]}",
+          AUTH_TOKEN_HEADER: @auth_token
         }
       else
-        {}
+        {
+          AUTH_TOKEN_HEADER: @auth_token
+        }
       end
     end
   end
