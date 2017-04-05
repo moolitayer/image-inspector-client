@@ -22,7 +22,7 @@ module ImageInspectorClient
         bearer_token:      nil,
         auth_token:        nil
       },
-      http_proxy_uri:   nil,
+      http_proxy_uri:   nil
     )
       @endpoint = URI.parse("#{uri}/api/#{version}")
       @auth_options = auth_options
@@ -76,7 +76,9 @@ module ImageInspectorClient
 
     def http_headers
       headers = {}
-      headers[:Authorization] = "Bearer #{@auth_options[:bearer_token]}" if @auth_options[:bearer_token]
+      if @auth_options[:bearer_token]
+        headers[:Authorization] = "Bearer #{@auth_options[:bearer_token]}"
+      end
       headers[:'X-Auth-Token'] = @auth_options[:auth_token] if @auth_options[:auth_token]
       headers
     end
