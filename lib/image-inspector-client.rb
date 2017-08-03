@@ -2,7 +2,7 @@ require 'json'
 require 'rest-client'
 require 'recursive_open_struct'
 
-# Client for image inspector: https://github.com/simon3z/image-inspector
+# Client for image inspector: https://github.com/openshift/image-inspector
 module ImageInspectorClient
   # module entry point
   class Client

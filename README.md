@@ -1,5 +1,5 @@
 # image-inspector-client
-a ruby client for [image-inspector](https://github.com/simon3z/image-inspector)
+a ruby client for [image-inspector](https://github.com/openshift/image-inspector)
 
 ## installing gem
 gem install image-inspector-client
