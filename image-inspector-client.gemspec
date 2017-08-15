@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['mtayer@redhat.com']
   spec.summary       = 'A client for image_inspector REST API'
   spec.description   = 'A client for image_inspector REST API'
-  spec.homepage      = 'https://github.com/moolitayer/image-inspector-client'
+  spec.homepage      = 'https://github.com/openshift/image-inspector-client-ruby'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
