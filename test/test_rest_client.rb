@@ -9,8 +9,9 @@ class TestRestClient < MiniTest::Test
     )
 
     e = assert_raises(ImageInspectorClient::InspectorClientException) do
-      ImageInspectorClient::Client.new('http://localhost:8080', 'v1')
-      .fetch_metadata
+      ImageInspectorClient::Client
+        .new('http://localhost:8080', 'v1')
+        .fetch_metadata
     end
 
     assert_equal(404, e.error_code)
@@ -24,8 +25,9 @@ class TestRestClient < MiniTest::Test
     )
 
     e = assert_raises(ImageInspectorClient::InspectorClientException) do
-      ImageInspectorClient::Client.new('http://localhost:8080', 'v1')
-      .fetch_metadata
+      ImageInspectorClient::Client
+        .new('http://localhost:8080', 'v1')
+        .fetch_metadata
     end
 
     assert_equal(404, e.error_code)
@@ -39,8 +41,9 @@ class TestRestClient < MiniTest::Test
     )
 
     e = assert_raises(ImageInspectorClient::InspectorClientException) do
-      ImageInspectorClient::Client.new('http://localhost:8080', 'v1')
-      .fetch_metadata
+      ImageInspectorClient::Client
+        .new('http://localhost:8080', 'v1')
+        .fetch_metadata
     end
 
     assert_equal(404, e.error_code)
