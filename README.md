@@ -1,3 +1,5 @@
+Deprecated, upstream development moved to https://github.com/openshift/image-inspector-client-ruby
+
 # image-inspector-client
 a ruby client for [image-inspector](https://github.com/openshift/image-inspector)
 
