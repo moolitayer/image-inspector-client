@@ -22,7 +22,7 @@ module ImageInspectorClient
         bearer_token:      nil,
         auth_token:        nil
       },
-      http_proxy_uri:   nil
+      http_proxy_uri: nil
     )
       @endpoint = URI.parse("#{uri}/api/#{version}")
       @auth_options = auth_options

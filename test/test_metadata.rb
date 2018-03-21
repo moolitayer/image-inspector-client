@@ -8,7 +8,8 @@ class TestMetadata < MiniTest::Test
       status: 200
     )
 
-    md = ImageInspectorClient::Client.new('http://localhost:8080', 'v1')
+    md = ImageInspectorClient::Client
+         .new('http://localhost:8080', 'v1')
          .fetch_metadata
 
     assert_instance_of(RecursiveOpenStruct, md)
