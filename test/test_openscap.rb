@@ -8,7 +8,8 @@ class TestOpenscap < MiniTest::Test
       status: 200
     )
 
-    md = ImageInspectorClient::Client.new('http://localhost:8080', 'v1')
+    md = ImageInspectorClient::Client
+         .new('http://localhost:8080', 'v1')
          .fetch_oscap_arf
 
     assert_equal(File.read('test/xml/openscap.xml'), md)
@@ -26,7 +27,8 @@ class TestOpenscap < MiniTest::Test
       status: 200
     )
 
-    md = ImageInspectorClient::Client.new('http://localhost:8080', 'v1')
+    md = ImageInspectorClient::Client
+         .new('http://localhost:8080', 'v1')
          .fetch_oscap_arf
 
     assert_equal('', md)
@@ -45,8 +47,9 @@ class TestOpenscap < MiniTest::Test
     )
 
     e = assert_raises(ImageInspectorClient::InspectorClientException) do
-      ImageInspectorClient::Client.new('http://localhost:8080', 'v1')
-      .fetch_oscap_arf
+      ImageInspectorClient::Client
+        .new('http://localhost:8080', 'v1')
+        .fetch_oscap_arf
     end
 
     assert_equal(404, e.error_code)
